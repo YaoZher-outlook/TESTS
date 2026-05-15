@@ -1,0 +1,6 @@
+name=Alice
+age=20
+studentID=S12345
+name=Mr. Smith
+salary=50000
+subject=Mathematics

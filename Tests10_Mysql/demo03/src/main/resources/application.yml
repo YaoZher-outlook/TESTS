@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: demo03
+  # 数据库连接配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/da01?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: YourPassword123.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# MyBatis 相关配置
+mybatis:
+  #指定 XML 映射文件的存放位置
+  mapper-locations: classpath:mapper/*.xml
+  # 实体类所在包的别名（这样 XML 里可以直接写 User 而不用写全路径）
+  type-aliases-package: com.test.demo03.entity
+  configuration:
+    # 开启驼峰命名自动映射
+    map-underscore-to-camel-case: true
+    # 打印 SQL 日志到控制台，方便调试
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
